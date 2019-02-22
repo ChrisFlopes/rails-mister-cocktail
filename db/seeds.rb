@@ -12,7 +12,8 @@ puts '🧙🏻‍♂️ Creating ingredients...'
 ingredients_attributes = []
 
 user['drinks'].each do |ingredient|
-  ingredients_attributes.sort << { name: ingredient['strIngredient1'] }
+  puts "Creating #{ingredient['strIngredient1']}"
+  ingredients_attributes << { name: ingredient['strIngredient1'] }
 end
 Ingredient.create!(ingredients_attributes)
 puts '👍🏻 Finished!'
